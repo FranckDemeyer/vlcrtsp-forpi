@@ -1,8 +1,6 @@
 FROM balenalib/rpi-alpine
 
-ARG ARCH=armv7l
-
-RUN install_packages git
+RUN install_packages vlc
 
 COPY resources/entrypoint.sh /
 RUN chmod +x /entrypoint.sh
