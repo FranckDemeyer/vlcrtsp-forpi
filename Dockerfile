@@ -1,6 +1,6 @@
-FROM balenalib/rpi-alpine:latest
+FROM balenalib/rpi-alpine
 
-RUN install_packages vlc
+RUN install_packages git
 
 COPY resources/entrypoint.sh /
 RUN chmod +x /entrypoint.sh
