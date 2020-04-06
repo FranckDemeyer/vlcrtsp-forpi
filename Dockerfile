@@ -1,9 +1,9 @@
-FROM balenalib/rpi-alpine:latest
+FROM balenalib/raspberry-pi
 
 RUN apt-get update -y &&
-    apt-get upgrade -y &&
-    DEBAIN_FRONTEND=noninteractive
-    apt-get install -y vlc
+   	apt-get install -y vlc &&
+	apt-get clean &&
+	rm -rf /var/lib/apt/list/
 
 COPY resources/entrypoint.sh /
 RUN chmod +x /entrypoint.sh
