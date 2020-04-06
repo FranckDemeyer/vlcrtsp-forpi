@@ -1,5 +1,7 @@
 FROM balenalib/rpi-alpine
 
+ARG ARCH=armv7l
+
 RUN install_packages git
 
 COPY resources/entrypoint.sh /
