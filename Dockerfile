@@ -1,4 +1,4 @@
-FROM balenalib/rpi-alpine:latest
+FROM balenalib/rpi-alpine
 
 RUN install_packages vlc
 
